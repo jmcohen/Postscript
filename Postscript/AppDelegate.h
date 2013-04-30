@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+@class Staff;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    Staff *staff;
+    NSInteger textFontSize;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) Staff *staff;
+@property (nonatomic) NSInteger textFontSize;
+
+- (void) makeTextFontSizeBigger;
+- (void) makeTextFontSizeSmaller;
++ (UIColor *) postscriptColor;
 
 @end
